@@ -1,4 +1,6 @@
 import Navigation from "@/components/Navigation";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, Quote, GraduationCap, Briefcase } from "lucide-react";
@@ -8,7 +10,7 @@ const Testimonials = () => {
     {
       name: "Ahmad S.",
       role: "Student at Istanbul Technical University",
-      content: "GEC made my dream of studying in Turkey a reality. From university selection to visa approval, their support was exceptional. I'm now pursuing my Master's degree in Istanbul, and I couldn't be more grateful.",
+      content: "WestGate made my dream of studying in Turkey a reality. From university selection to visa approval, their support was exceptional. I'm now pursuing my Master's degree in Istanbul, and I couldn't be more grateful.",
       rating: 5,
       category: "Educational",
       destination: "Turkey",
@@ -17,7 +19,7 @@ const Testimonials = () => {
     {
       name: "Fatima K.",
       role: "Student at European University of Cyprus",
-      content: "The team at GEC guided me through every step of the complex visa process for Cyprus. Their attention to detail and continuous support made all the difference.",
+      content: "The team at WestGate guided me through every step of the complex visa process for Cyprus. Their attention to detail and continuous support made all the difference.",
       rating: 5,
       category: "Educational",
       destination: "Cyprus",
@@ -26,7 +28,7 @@ const Testimonials = () => {
     {
       name: "Mohammad R.",
       role: "Tech Startup Founder",
-      content: "As a startup founder, GEC's business consultancy services helped us establish proper legal structures and develop a winning business plan. Their expertise saved us months of trial and error.",
+      content: "As a startup founder, WestGate's business consultancy services helped us establish proper legal structures and develop a winning business plan. Their expertise saved us months of trial and error.",
       rating: 5,
       category: "Business",
       destination: "Afghanistan",
@@ -35,7 +37,7 @@ const Testimonials = () => {
     {
       name: "Zahra M.",
       role: "MBA Student in Germany",
-      content: "From IELTS preparation to university applications, GEC provided comprehensive support. Their language training programs are exceptional and really prepared me for success abroad.",
+      content: "From IELTS preparation to university applications, WestGate provided comprehensive support. Their language training programs are exceptional and really prepared me for success abroad.",
       rating: 5,
       category: "Educational",
       destination: "Germany",
@@ -44,7 +46,7 @@ const Testimonials = () => {
     {
       name: "Hassan A.",
       role: "Small Business Owner",
-      content: "GEC's digital transformation consulting helped modernize our traditional business. We now have proper systems in place and our efficiency has increased dramatically.",
+      content: "WestGate's digital transformation consulting helped modernize our traditional business. We now have proper systems in place and our efficiency has increased dramatically.",
       rating: 5,
       category: "Business",
       destination: "Afghanistan",
@@ -53,7 +55,7 @@ const Testimonials = () => {
     {
       name: "Mariam H.",
       role: "Student in Poland",
-      content: "The scholarship guidance I received from GEC was invaluable. They helped me secure funding for my studies and made my European education dream affordable.",
+      content: "The scholarship guidance I received from WestGate was invaluable. They helped me secure funding for my studies and made my European education dream affordable.",
       rating: 5,
       category: "Educational",
       destination: "Poland",
@@ -65,7 +67,7 @@ const Testimonials = () => {
     { label: "Students Successfully Placed", value: "500+", icon: GraduationCap },
     { label: "Visa Approval Rate", value: "95%", icon: Star },
     { label: "Businesses Supported", value: "200+", icon: Briefcase },
-    { label: "Years of Excellence", value: "4+", icon: Star }
+    { label: "Years of Excellence", value: "9+", icon: Star }
   ];
 
   return (
@@ -79,7 +81,7 @@ const Testimonials = () => {
             Client <span className="bg-gradient-primary bg-clip-text text-transparent">Testimonials</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Success stories from students and businesses who achieved their goals with GEC's expert guidance.
+            Success stories from students and businesses who achieved their goals with WestGate's expert guidance.
           </p>
         </div>
 
@@ -159,6 +161,9 @@ const Testimonials = () => {
           </CardContent>
         </Card>
       </div>
+      
+      <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

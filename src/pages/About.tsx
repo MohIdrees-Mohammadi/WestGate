@@ -1,4 +1,6 @@
 import Navigation from "@/components/Navigation";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Users, Target, Award, Lightbulb } from "lucide-react";
@@ -12,10 +14,10 @@ const About = () => {
         {/* Hero Section */}
         <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            About <span className="bg-gradient-primary bg-clip-text text-transparent">GEC</span>
+            About <span className="bg-gradient-primary bg-clip-text text-transparent">WestGate</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Your trusted partner in achieving academic excellence and business success since 2020.
+            Your trusted partner in achieving academic excellence and business success since 2015.
           </p>
         </div>
 
@@ -25,7 +27,7 @@ const About = () => {
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold text-foreground mb-4">Our Story</h2>
               <p className="text-muted-foreground mb-4">
-                Founded in January 2020 in Kabul, Afghanistan, GEC began as Global Educational Consultancy Services Company (GECSC) with a singular mission: to bridge the gap between Afghan students and international educational opportunities.
+                Founded in January 2015 in Kabul, Afghanistan, WestGate began as Global Educational Consultancy Services Company (WGCSC) with a singular mission: to bridge the gap between Afghan students and international educational opportunities.
               </p>
               <p className="text-muted-foreground">
                 What started as an educational consultancy has evolved into a comprehensive consulting firm serving both academic aspirations and business ambitions.
@@ -102,13 +104,16 @@ const About = () => {
                 <div className="text-sm opacity-90">Businesses Supported</div>
               </div>
               <div>
-                <div className="text-3xl font-bold mb-2">4+</div>
+                <div className="text-3xl font-bold mb-2">9+</div>
                 <div className="text-sm opacity-90">Years of Excellence</div>
               </div>
             </div>
           </CardContent>
         </Card>
       </div>
+      
+      <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

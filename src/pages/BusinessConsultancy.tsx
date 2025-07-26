@@ -1,4 +1,7 @@
 import Navigation from "@/components/Navigation";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import Footer from "@/components/Footer";
+import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
@@ -15,6 +18,7 @@ import {
 } from "lucide-react";
 
 const BusinessConsultancy = () => {
+  const navigate = useNavigate();
   const services = [
     {
       icon: Briefcase,
@@ -91,7 +95,7 @@ const BusinessConsultancy = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             Strategic business solutions designed to transform startups and enterprises through expert guidance and proven methodologies.
           </p>
-          <Button variant="hero" size="lg">
+          <Button variant="hero" size="lg" onClick={() => navigate('/contact')}>
             Transform Your Business
           </Button>
         </div>
@@ -119,7 +123,7 @@ const BusinessConsultancy = () => {
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <Card className="shadow-elegant">
             <CardHeader>
-              <CardTitle className="text-2xl">Why Choose GEC for Business Consulting?</CardTitle>
+              <CardTitle className="text-2xl">Why Choose WestGate for Business Consulting?</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-start space-x-3">
@@ -186,12 +190,15 @@ const BusinessConsultancy = () => {
             <p className="mb-6 opacity-90">
               Let our expert consultants help you navigate challenges and unlock growth opportunities.
             </p>
-            <Button variant="secondary" size="lg">
+            <Button variant="secondary" size="lg" onClick={() => navigate('/contact')}>
               Schedule a Consultation
             </Button>
           </CardContent>
         </Card>
       </div>
+      
+      <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

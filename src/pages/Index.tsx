@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -34,7 +35,7 @@ const Index = () => {
             </span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Global Educational & Business Consultancy Services (GEC) - Your trusted partner in achieving academic excellence and business success since 2020.
+            Global Educational & Business Consultancy Services (WestGate) - Your trusted partner in achieving academic excellence and business success since 2015.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button variant="hero" size="lg" asChild>
@@ -172,7 +173,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">Success Stories</h2>
-            <p className="text-xl text-muted-foreground">What our clients say about their experience with GEC</p>
+            <p className="text-xl text-muted-foreground">What our clients say about their experience with WestGate</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -180,13 +181,13 @@ const Index = () => {
               {
                 name: "Ahmad S.",
                 role: "Student in Turkey",
-                content: "GEC made my dream of studying in Turkey a reality. From university selection to visa approval, their support was exceptional.",
+                content: "WestGate made my dream of studying in Turkey a reality. From university selection to visa approval, their support was exceptional.",
                 rating: 5
               },
               {
                 name: "Mohammad R.",
                 role: "Startup Founder",
-                content: "GEC's business consultancy helped us establish proper legal structures and develop a winning business plan.",
+                content: "WestGate's business consultancy helped us establish proper legal structures and develop a winning business plan.",
                 rating: 5
               },
               {
@@ -248,80 +249,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-card border-t border-border py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-3 mb-4">
-                <img 
-                  src="/lovable-uploads/a2a30feb-af6f-46fc-a4a6-723a199933fb.png" 
-                  alt="Logo" 
-                  className="h-8 w-auto"
-                />
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Your trusted partner in educational and business success with 10+ years of experience.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-foreground mb-4">Services</h4>
-              <div className="space-y-2 text-sm">
-                <Link to="/educational-services" className="block text-muted-foreground hover:text-primary transition-colors">
-                  Educational Consultancy
-                </Link>
-                <Link to="/business-consultancy" className="block text-muted-foreground hover:text-primary transition-colors">
-                  Business Consultancy
-                </Link>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-foreground mb-4">Company</h4>
-              <div className="space-y-2 text-sm">
-                <Link to="/about" className="block text-muted-foreground hover:text-primary transition-colors">
-                  About Us
-                </Link>
-                <Link to="/testimonials" className="block text-muted-foreground hover:text-primary transition-colors">
-                  Testimonials
-                </Link>
-                <Link to="/contact" className="block text-muted-foreground hover:text-primary transition-colors">
-                  Contact
-                </Link>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-foreground mb-4">Contact Info</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <p>📞 +447380385068</p>
-                <p>📧 info@nationwidehub.co.uk</p>
-                <p>🌐 www.nationwidehub.co.uk</p>
-              </div>
-              
-              <div className="mt-6">
-                <h5 className="font-semibold text-foreground mb-2">Our Location</h5>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.274899!2d-0.127758!3d51.507351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b323093d5d3%3A0x2df9d571863089e6!2sLondon%2C%20UK!5e0!3m2!1sen!2s!4v1234567890!5m2!1sen!2s"
-                  width="100%"
-                  height="150"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="rounded-lg"
-                  title="Office Location - London, UK"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2024 Nationwide Hub. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
       
       <WhatsAppButton />
     </div>

@@ -1,4 +1,6 @@
 import Navigation from "@/components/Navigation";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -23,7 +25,7 @@ const Contact = () => {
         {/* Hero Section */}
         <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Contact <span className="bg-gradient-primary bg-clip-text text-transparent">GEC</span>
+            Contact <span className="bg-gradient-primary bg-clip-text text-transparent">WestGate</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Ready to start your journey? Get in touch with our expert consultants today.
@@ -70,7 +72,7 @@ const Contact = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">info@gec.edu.af</p>
+                  <p className="text-muted-foreground">info@nationwidehub.co.uk</p>
                 </CardContent>
               </Card>
             </div>
@@ -205,6 +207,9 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      
+      <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

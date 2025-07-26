@@ -1,4 +1,7 @@
 import Navigation from "@/components/Navigation";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import Footer from "@/components/Footer";
+import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -9,10 +12,15 @@ import {
   Home, 
   Languages,
   MapPin,
-  CheckCircle 
+  CheckCircle,
+  Banknote,
+  Users,
+  Shield,
+  BookOpen
 } from "lucide-react";
 
 const EducationalServices = () => {
+  const navigate = useNavigate();
   const services = [
     {
       icon: GraduationCap,
@@ -57,7 +65,7 @@ const EducationalServices = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             Comprehensive study abroad solutions to turn your international education dreams into reality.
           </p>
-          <Button variant="hero" size="lg">
+          <Button variant="hero" size="lg" onClick={() => navigate('/contact')}>
             Start Your Journey
           </Button>
         </div>
@@ -125,6 +133,155 @@ const EducationalServices = () => {
           ))}
         </div>
 
+        {/* Financial Education Section */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Financial <span className="bg-gradient-primary bg-clip-text text-transparent">Education</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Empowering individuals with essential financial literacy skills for lifelong success
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+            <Card className="shadow-elegant hover:shadow-glow transition-all duration-300">
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <div className="bg-gradient-primary rounded-lg p-3">
+                    <BookOpen className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  <CardTitle className="text-xl">Financial Education in Schools</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Dedicated "Money Lessons" programme for school children aged 7 to 14, designed for Key Stage 2 and 3 students.
+                </p>
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-foreground">Programme Features</h4>
+                  <div className="space-y-1">
+                    {[
+                      "Ready-to-use lesson plans and activity sheets",
+                      "Age-appropriate and engaging materials",
+                      "Special educational needs adaptations",
+                      "Topics: saving, budgeting, understanding money value",
+                      "Logical sequence for progressive learning"
+                    ].map((feature, idx) => (
+                      <div key={idx} className="flex items-start space-x-2">
+                        <CheckCircle className="h-4 w-4 text-success mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-elegant hover:shadow-glow transition-all duration-300">
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <div className="bg-gradient-primary rounded-lg p-3">
+                    <Users className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  <CardTitle className="text-xl">Student Banking & University Life</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Comprehensive guidance for young adults preparing for university and independent money management.
+                </p>
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-foreground">Student Support</h4>
+                  <div className="space-y-1">
+                    {[
+                      "Pre-university bank account setup",
+                      "Budget planning and financial preparation",
+                      "Student finance application guidance",
+                      "Contents insurance advice",
+                      "Student discount platforms (TOTUM, UNiDAYS)",
+                      "Smart accommodation choices"
+                    ].map((feature, idx) => (
+                      <div key={idx} className="flex items-start space-x-2">
+                        <CheckCircle className="h-4 w-4 text-success mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-elegant hover:shadow-glow transition-all duration-300">
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <div className="bg-gradient-primary rounded-lg p-3">
+                    <Banknote className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  <CardTitle className="text-xl">Banking for Teenagers</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  FlexOne current account for young people aged 11 to 17, designed to teach responsible money management.
+                </p>
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-foreground">Account Benefits</h4>
+                  <div className="space-y-1">
+                    {[
+                      "No monthly fees",
+                      "Interest on balances up to limit",
+                      "Online, mobile app, phone, and branch access",
+                      "Age-appropriate cash or debit card",
+                      "Automatic transition to adult account at 23",
+                      "Early introduction to banking fundamentals"
+                    ].map((feature, idx) => (
+                      <div key={idx} className="flex items-start space-x-2">
+                        <CheckCircle className="h-4 w-4 text-success mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-elegant hover:shadow-glow transition-all duration-300">
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <div className="bg-gradient-primary rounded-lg p-3">
+                    <Shield className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  <CardTitle className="text-xl">Scam Awareness & Financial Safety</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Comprehensive education on recognizing and avoiding financial fraud and scams in today's digital world.
+                </p>
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-foreground">Safety Education</h4>
+                  <div className="space-y-1">
+                    {[
+                      "Common scam recognition techniques",
+                      "Never share passwords or security codes",
+                      "Verify unusual payment requests",
+                      "Suspicious link and email identification",
+                      "Fraud reporting procedures",
+                      "Digital world safety practices"
+                    ].map((feature, idx) => (
+                      <div key={idx} className="flex items-start space-x-2">
+                        <CheckCircle className="h-4 w-4 text-success mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
         {/* Process Section */}
         <Card className="shadow-elegant">
           <CardHeader>
@@ -150,6 +307,9 @@ const EducationalServices = () => {
           </CardContent>
         </Card>
       </div>
+      
+      <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

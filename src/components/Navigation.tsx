@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, GraduationCap, Briefcase } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
   const location = useLocation();
 
   const navItems = [
@@ -46,7 +48,7 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button variant="hero" size="sm">
+            <Button variant="hero" size="sm" onClick={() => navigate('/contact')}>
               Get Started
             </Button>
           </div>
@@ -82,7 +84,7 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button variant="hero" size="sm" className="w-full">
+                <Button variant="hero" size="sm" className="w-full" onClick={() => { setIsOpen(false); navigate('/contact'); }}>
                   Get Started
                 </Button>
               </div>
