@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Footer from "@/components/Footer";
@@ -17,6 +18,7 @@ import {
 } from "lucide-react";
 
 const Contact = () => {
+  const [selectedService, setSelectedService] = useState<'educational' | 'business' | null>(null);
   return (
     <div className="min-h-screen bg-gradient-subtle">
       <Navigation />
@@ -44,8 +46,8 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  2nd Floor, Pashtany Bank<br />
-                  Muslim Plaza, Haji Yaqub Square<br />
+                  Light Center 5 Floor Sher E- Now<br />
+                  Haji Yaqoob Square<br />
                   Kabul, Afghanistan
                 </p>
               </CardContent>
@@ -60,7 +62,7 @@ const Contact = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground font-mono">+93 789 117 112</p>
+                  <p className="text-muted-foreground font-mono">0745686848</p>
                 </CardContent>
               </Card>
 
@@ -148,11 +150,19 @@ const Contact = () => {
               <div className="space-y-2">
                 <label className="text-sm font-medium text-foreground">Service Interest</label>
                 <div className="grid grid-cols-2 gap-3">
-                  <Button variant="outline" className="justify-start">
+                  <Button 
+                    variant={selectedService === 'educational' ? 'default' : 'outline'} 
+                    className="justify-start"
+                    onClick={() => setSelectedService('educational')}
+                  >
                     <GraduationCap className="h-4 w-4 mr-2" />
                     Educational
                   </Button>
-                  <Button variant="outline" className="justify-start">
+                  <Button 
+                    variant={selectedService === 'business' ? 'default' : 'outline'} 
+                    className="justify-start"
+                    onClick={() => setSelectedService('business')}
+                  >
                     <Briefcase className="h-4 w-4 mr-2" />
                     Business
                   </Button>
@@ -167,7 +177,33 @@ const Contact = () => {
                 />
               </div>
 
-              <Button variant="hero" size="lg" className="w-full">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="w-full"
+                onClick={() => {
+                  const firstName = (document.querySelector('input[placeholder="Enter your first name"]') as HTMLInputElement)?.value || '';
+                  const lastName = (document.querySelector('input[placeholder="Enter your last name"]') as HTMLInputElement)?.value || '';
+                  const email = (document.querySelector('input[placeholder="Enter your email address"]') as HTMLInputElement)?.value || '';
+                  const phone = (document.querySelector('input[placeholder="Enter your phone number"]') as HTMLInputElement)?.value || '';
+                  const message = (document.querySelector('textarea[placeholder="Tell us about your goals and how we can help you..."]') as HTMLTextAreaElement)?.value || '';
+                  
+                  const whatsappMessage = `Hello WestGate Team,
+
+Name: ${firstName} ${lastName}
+Email: ${email}
+Phone: ${phone}
+Service Interest: ${selectedService || 'Not specified'}
+
+Message: ${message}
+
+Best regards,
+${firstName} ${lastName}`;
+                  
+                  const encodedMessage = encodeURIComponent(whatsappMessage);
+                  window.open(`https://wa.me/93745686848?text=${encodedMessage}`, '_blank');
+                }}
+              >
                 <Send className="h-4 w-4 mr-2" />
                 Send Message
               </Button>

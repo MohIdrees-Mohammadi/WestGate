@@ -14,7 +14,8 @@ import {
   FolderKanban,
   GraduationCap,
   Scale,
-  DollarSign
+  DollarSign,
+  Network
 } from "lucide-react";
 
 const BusinessConsultancy = () => {
@@ -79,6 +80,12 @@ const BusinessConsultancy = () => {
       title: "Investment & Funding Strategy",
       description: "Access to grants, donor connections, venture capital networks, and investment partnership facilitation.",
       color: "text-accent"
+    },
+    {
+      icon: Network,
+      title: "Business Networking Membership",
+      description: "Exclusive access to our professional business network, industry connections, and strategic partnership opportunities across multiple sectors.",
+      color: "text-success"
     }
   ];
 
@@ -131,8 +138,8 @@ const BusinessConsultancy = () => {
                   <div className="w-2 h-2 bg-success rounded-full"></div>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">Local Expertise, Global Standards</h4>
-                  <p className="text-sm text-muted-foreground">Deep understanding of local markets combined with international best practices.</p>
+                  <h4 className="font-semibold text-foreground">Local Expertise, International Standards</h4>
+                  <p className="text-sm text-muted-foreground">Deep understanding of local markets combined with worldwide best practices.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">

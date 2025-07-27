@@ -27,7 +27,7 @@ const About = () => {
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold text-foreground mb-4">Our Story</h2>
               <p className="text-muted-foreground mb-4">
-                Founded in January 2015 in Kabul, Afghanistan, WestGate began as Global Educational Consultancy Services Company (WGCSC) with a singular mission: to bridge the gap between Afghan students and international educational opportunities.
+                Founded in January 2015 in Kabul, Afghanistan, WestGate began as International Educational Consultancy Services Company (WGCSC) with a singular mission: to bridge the gap between Afghan students and worldwide educational opportunities.
               </p>
               <p className="text-muted-foreground">
                 What started as an educational consultancy has evolved into a comprehensive consulting firm serving both academic aspirations and business ambitions.
@@ -39,7 +39,7 @@ const About = () => {
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold text-foreground mb-4">Our Mission</h2>
               <p className="text-muted-foreground mb-4">
-                We believe that success starts with excellent consulting. Our experienced team combines deep local knowledge with global expertise to deliver personalized solutions that drive results.
+                We believe that success starts with excellent consulting. Our experienced team combines deep local knowledge with international expertise to deliver personalized solutions that drive results.
               </p>
               <Badge variant="secondary" className="mb-2">
                 "Success Starts with Excellent Consulting"

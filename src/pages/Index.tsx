@@ -35,7 +35,7 @@ const Index = () => {
             </span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Global Educational & Business Consultancy Services (WestGate) - Your trusted partner in achieving academic excellence and business success since 2015.
+            International Educational & Business Consultancy Services (WestGate) - Your trusted partner in achieving academic excellence and business success since 2015.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button variant="hero" size="lg" asChild>
@@ -96,7 +96,7 @@ const Index = () => {
                 
                 <div className="space-y-3 mb-6">
                   {[
-                    "University & course counseling globally",
+                    "University & course counseling worldwide",
                     "Complete documentation support",
                     "Visa application assistance",
                     "Language preparation programs"

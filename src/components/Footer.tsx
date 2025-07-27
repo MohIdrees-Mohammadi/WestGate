@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-foreground">WestGate</h3>
             <p className="text-sm text-muted-foreground">
-              Global Educational & Business Consultancy Services - Your trusted partner in achieving academic excellence and business success since 2015.
+              International Educational & Business Consultancy Services - Your trusted partner in achieving academic excellence and business success since 2015.
             </p>
           </div>
           
@@ -56,7 +56,18 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; 2024 WestGate. All rights reserved.</p>
+          <p>&copy; 2025 WestGate. All rights reserved.</p>
+          <p className="mt-2">
+            Developed by{" "}
+            <a 
+              href="https://mohammadi-portfolio.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 transition-colors font-bold underline decoration-dashed"
+            >
+              Idrees Mohammadi
+            </a>
+          </p>
         </div>
       </div>
     </footer>
